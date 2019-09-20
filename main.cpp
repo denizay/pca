@@ -82,10 +82,10 @@ int main() {
   MatrixXd mat2 = MatrixXd::Random(900000,12);
 
   std::cout << "started" << std::endl;
+  // compating the eigen way of pca vs my way
   timestamp_t t0 = get_timestamp();
   
   MatrixXd covmat = cov(mat);
-  
   timestamp_t t1 = get_timestamp();
   double secs = (t1 - t0) / 1000000.0L;
   std::cout << "ended" << std::endl;
